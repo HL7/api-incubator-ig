@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="cic" gitUrl="https://github.com/HL7/fhir-symptoms-ig" url="http://hl7.org/fhir/uv/symptoms">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="OperationDefinition/Resource-large-resource-add" key="OperationDefinition-Resource-large-resource-add" name="Add to an array in a large resource"/>
+<artifact deprecated="true" id="ValueSet/AffectiveGrade" key="ValueSet-AffectiveGrade" name="Affective Grade"/>
+<artifact deprecated="true" id="ValueSet/AlleviatingFactorCodes" key="ValueSet-AlleviatingFactorCodes" name="Alleviating Factor Codes"/>
+<artifact deprecated="true" id="StructureDefinition/AssessmentScaleCollection" key="StructureDefinition-AssessmentScaleCollection" name="Assessment Scale Collection Observation"/>
+<artifact deprecated="true" id="StructureDefinition/AssessmentScaleInformation" key="StructureDefinition-AssessmentScaleInformation" name="Assessment Scale Information"/>
+<artifact deprecated="true" id="StructureDefinition/AssessmentScaleObservation" key="StructureDefinition-AssessmentScaleObservation" name="Assessment Scale Single Observation"/>
+<artifact deprecated="true" id="Observation/ChestPainSymptom" key="Observation-ChestPainSymptom" name="ChestPainSymptom"/>
+<artifact deprecated="true" id="Observation/ChillSymptomAbsence" key="Observation-ChillSymptomAbsence" name="ChillSymptomAbsence"/>
+<artifact deprecated="true" id="ValueSet/ClinicalCourseCodes" key="ValueSet-ClinicalCourseCodes" name="Clinical Course Codes"/>
+<artifact deprecated="true" id="ValueSet/CommonSymptomCodes" key="ValueSet-CommonSymptomCodes" name="Common Set of Symptom Codes"/>
+<artifact deprecated="true" id="Observation/CoughSymptom" key="Observation-CoughSymptom" name="CoughSymptom"/>
+<artifact deprecated="true" id="Observation/DizzinessSymptom" key="Observation-DizzinessSymptom" name="DizzinessSymptom"/>
+<artifact id="GraphDefinition/example" key="GraphDefinition-example" name="DocumentGenerationTemplate"/>
+<artifact deprecated="true" id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" name="EffectCS"/>
+<artifact deprecated="true" id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0017" name="EffectVS"/>
+<artifact deprecated="true" id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0175" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0175" name="EpisodicityCS"/>
+<artifact deprecated="true" id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0175" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0175" name="EpisodicityVS"/>
+<artifact deprecated="true" id="ValueSet/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.at0002" key="ValueSet-openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0.at0002" name="ExcludedSymptomVS"/>
+<artifact deprecated="true" id="StructureDefinition/openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0" key="StructureDefinition-openEHR-EHR-CLUSTER.exclusion-symptom-sign.v0" name="ExclusionSymptomSignV0"/>
+<artifact deprecated="true" id="Observation/FaintingSymptomAbsence" key="Observation-FaintingSymptomAbsence" name="FaintingSymptomAbsence"/>
+<artifact deprecated="true" id="Observation/FatigueSymptom" key="Observation-FatigueSymptom" name="FatigueSymptom"/>
+<artifact deprecated="true" id="Observation/FeverSymptom" key="Observation-FeverSymptom" name="FeverSymptom"/>
+<artifact deprecated="true" id="Observation/FeverSymptomAbsence" key="Observation-FeverSymptomAbsence" name="FeverSymptomAbsence"/>
+<artifact id="OperationDefinition/Resource-large-resource-filter" key="OperationDefinition-Resource-large-resource-filter" name="Filter an array in a large resource"/>
+<artifact id="OperationDefinition/List-find" key="OperationDefinition-List-find" name="Find a functional list"/>
+<artifact deprecated="true" id="ValueSet/FrequencyCodes" key="ValueSet-FrequencyCodes" name="Frequency Codes"/>
+<artifact deprecated="true" id="StructureDefinition/FunctionalAssessment" key="StructureDefinition-FunctionalAssessment" name="Functional Assessment"/>
+<artifact deprecated="true" id="StructureDefinition/FunctionalAssessmentCollection" key="StructureDefinition-FunctionalAssessmentCollection" name="Functional Assessment Collection"/>
+<artifact deprecated="true" id="StructureDefinition/FunctionalAssessmentObservation" key="StructureDefinition-FunctionalAssessmentObservation" name="Functional Assessment Single Observation"/>
+<artifact deprecated="true" id="ValueSet/FunctionalClassification" key="ValueSet-FunctionalClassification" name="Functional Classification Codes"/>
+<artifact id="ValueSet/graph-compartment-rule" key="ValueSet-graph-compartment-rule" name="Graph Compartment Rule"/>
+<artifact id="CodeSystem/graph-compartment-rule" key="CodeSystem-graph-compartment-rule" name="Graph Compartment Rule"/>
+<artifact id="ValueSet/graph-compartment-use" key="ValueSet-graph-compartment-use" name="Graph Compartment Use"/>
+<artifact id="CodeSystem/graph-compartment-use" key="CodeSystem-graph-compartment-use" name="Graph Compartment Use"/>
+<artifact id="StructureDefinition/GraphDefinition" key="StructureDefinition-GraphDefinition" name="Graph Definition"/>
+<artifact id="List/GraphDefinition-examples" key="List-GraphDefinition-examples" name="GraphDefinition-examples"/>
+<artifact id="List/GraphDefinition-operations" key="List-GraphDefinition-operations" name="GraphDefinition-operations"/>
+<artifact id="SearchParameter/GraphDefinition-context-quantity" key="SearchParameter-GraphDefinition-context-quantity" name="GraphDefinitionContext-quantitySearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-type-quantity" key="SearchParameter-GraphDefinition-context-type-quantity" name="GraphDefinitionContext-type-quantitySearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-type-value" key="SearchParameter-GraphDefinition-context-type-value" name="GraphDefinitionContext-type-valueSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-type" key="SearchParameter-GraphDefinition-context-type" name="GraphDefinitionContext-typeSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context" key="SearchParameter-GraphDefinition-context" name="GraphDefinitionContextSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-date" key="SearchParameter-GraphDefinition-date" name="GraphDefinitionDateSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-description" key="SearchParameter-GraphDefinition-description" name="GraphDefinitionDescriptionSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-identifier" key="SearchParameter-GraphDefinition-identifier" name="GraphDefinitionIdentifierSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-jurisdiction" key="SearchParameter-GraphDefinition-jurisdiction" name="GraphDefinitionJurisdictionSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-name" key="SearchParameter-GraphDefinition-name" name="GraphDefinitionNameSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-publisher" key="SearchParameter-GraphDefinition-publisher" name="GraphDefinitionPublisherSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-start" key="SearchParameter-GraphDefinition-start" name="GraphDefinitionStartSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-status" key="SearchParameter-GraphDefinition-status" name="GraphDefinitionStatusSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-url" key="SearchParameter-GraphDefinition-url" name="GraphDefinitionUrlSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-version" key="SearchParameter-GraphDefinition-version" name="GraphDefinitionVersionSearchParam"/>
+<artifact deprecated="true" id="Observation/HearingLossSymptom" key="Observation-HearingLossSymptom" name="HearingLossSymptom"/>
+<artifact deprecated="true" id="Patient/JaneDoe" key="Patient-JaneDoe" name="JaneDoe"/>
+<artifact deprecated="true" id="Patient/JohnDoe" key="Patient-JohnDoe" name="JohnDoe"/>
+<artifact deprecated="true" id="Observation/NaueaSymptomAbsence" key="Observation-NaueaSymptomAbsence" name="NaueaSymptomAbsence"/>
+<artifact deprecated="true" id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0186" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0186" name="OccurrenceCS"/>
+<artifact deprecated="true" id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0186" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0186" name="OccurrenceVS"/>
+<artifact deprecated="true" id="ValueSet/OtherEventCodes" key="ValueSet-OtherEventCodes" name="Other Event Codes"/>
+<artifact deprecated="true" id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0180" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0180" name="ProgressionCS"/>
+<artifact deprecated="true" id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0180" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0180" name="ProgressionVS"/>
+<artifact id="ValueSet/publication-status" key="ValueSet-publication-status" name="Publication Status"/>
+<artifact deprecated="true" id="ValueSet/QualityCodes" key="ValueSet-QualityCodes" name="Quality Codes"/>
+<artifact id="OperationDefinition/Resource-large-resource-remove" key="OperationDefinition-Resource-large-resource-remove" name="Remove from an array in a large resource"/>
+<artifact deprecated="true" id="ValueSet/SeverityCodes" key="ValueSet-SeverityCodes" name="Severity Codes"/>
+<artifact deprecated="true" id="CodeSystem/openEHR-EHR-CLUSTER.symptom-sign.v2.at0021" key="CodeSystem-openEHR-EHR-CLUSTER.symptom-sign.v2.at0021" name="SeverityCategoryCS"/>
+<artifact deprecated="true" id="ValueSet/openEHR-EHR-CLUSTER.symptom-sign.v2.at0021" key="ValueSet-openEHR-EHR-CLUSTER.symptom-sign.v2.at0021" name="SeverityCategoryVS"/>
+<artifact deprecated="true" id="Observation/ShortnessOfBreathPHSymptom" key="Observation-ShortnessOfBreathPHSymptom" name="ShortnessOfBreathPHSymptom"/>
+<artifact deprecated="true" id="Observation/ShortnessOfBreathSymptom" key="Observation-ShortnessOfBreathSymptom" name="ShortnessOfBreathSymptom"/>
+<artifact deprecated="true" id="ValueSet/SpeedOfOnset" key="ValueSet-SpeedOfOnset" name="Speed of Onset"/>
+<artifact deprecated="true" id="StructureDefinition/SurroundingEventMedication" key="StructureDefinition-SurroundingEventMedication" name="Surrounding Event Medication"/>
+<artifact deprecated="true" id="StructureDefinition/SymptomAbsentObservation" key="StructureDefinition-SymptomAbsentObservation" name="Symptom Absent Observation"/>
+<artifact deprecated="true" id="StructureDefinition/SymptomLogicalModel" key="StructureDefinition-SymptomLogicalModel" name="Symptom Logical Model"/>
+<artifact deprecated="true" id="StructureDefinition/SymptomObservation" key="StructureDefinition-SymptomObservation" name="Symptom Observation"/>
+<artifact deprecated="true" id="CapabilityStatement/SymptomCapabilities" key="CapabilityStatement-SymptomCapabilities" name="Symptom System Capabilities"/>
+<artifact deprecated="true" id="StructureDefinition/openEHR-EHR-CLUSTER.symptom-sign.v2" key="StructureDefinition-openEHR-EHR-CLUSTER.symptom-sign.v2" name="SymptomSignV2"/>
+<artifact deprecated="true" id="CodeSystem/SymptomTemporary" key="CodeSystem-SymptomTemporary" name="Temporary Symptom Codes"/>
+<artifact deprecated="true" id="ValueSet/TrendCodes" key="ValueSet-TrendCodes" name="Trend Codes"/>
+<artifact deprecated="true" id="ValueSet/TriggersOrExacerbatingFactorCodes" key="ValueSet-TriggersOrExacerbatingFactorCodes" name="Triggers or Exacerbating Factor Codes"/>
+<artifact deprecated="true" id="Patient/TrishDoe" key="Patient-TrishDoe" name="TrishDoe"/>
+<artifact deprecated="true" id="Condition/Type2DiabetesMellitus" key="Condition-Type2DiabetesMellitus" name="Type2DiabetesMellitus"/>
+<artifact deprecated="true" id="Observation/UnconsciousnessSymptomAbsence" key="Observation-UnconsciousnessSymptomAbsence" name="UnconsciousnessSymptomAbsence"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page deprecated="true" key="artifact_overview" name="Artifact Overview"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="background" name="Background"/>
+<page key="changes" name="Change Log"/>
+<page deprecated="true" key="conformance" name="Conformance Expectations"/>
+<page key="exchange" name="Exchange"/>
+<page key="index" name="IG Home"/>
+<page deprecated="true" key="acknowledgements" name="Project and Participants"/>
+<page key="toc" name="Table of Contents"/>
+<page deprecated="true" key="terminology" name="Terminology"/>
+<page deprecated="true" key="usecases" name="Use Cases"/>
+</specification>
