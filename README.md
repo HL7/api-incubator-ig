@@ -1,7 +1,9 @@
-# fhir-symptoms-ig
-The Symptoms IG will support a structured approach to exchanging patient symptoms and related data.
+# api-incubator-ig
+
+New features that are being prepared for addition to the FHIR standard when they are mature.
 
 ### IG installation 
+
 In order to build the IG, please ensure you have the following installed:
 - 64 Bit JVM - at minimum Java 17
 - The latest stable versions of Ruby and Jekyll
@@ -10,6 +12,7 @@ In order to build the IG, please ensure you have the following installed:
 - Clone the [repository](https://github.com/HL7/fhir-symptoms-ig). 
 
 ### Initial run (Windows)
+
 - To install SUSHI, run 'sushi init'
 - To install the guide, run _updatePublisher.bat and type 'Y' in response to both prompts. This will install the publisher and enable building.
 - To build the guide, run _genonce.bat, either in a command window or by double-clicking the file
