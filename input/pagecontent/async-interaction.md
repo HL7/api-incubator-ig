@@ -343,6 +343,83 @@ Content-Type: application/fhir+json; charset=utf-8
 }
 ```
 
+### Examples: Other Interaction Types
+
+The pattern is not limited to operations that return `Parameters`. Because the result fetch preserves the full
+response semantics of the corresponding synchronous interaction, the same flow works for any interaction type.
+The kick-off and polling steps are identical to the `$reindex` example above; only the final result differs.
+
+#### Asynchronous Create
+
+A client submits a create with `Prefer: respond-async`:
+
+```
+POST /fhir/Observation HTTP/1.1
+Host: fhir.example.com
+Accept: application/fhir+json
+Prefer: respond-async
+Content-Type: application/fhir+json
+
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "code": { "text": "Body weight" },
+  "valueQuantity": { "value": 72.5, "unit": "kg" }
+}
+```
+
+After the `202` → poll → `303` flow, fetching the result returns what the synchronous create would have
+returned — including the `201 Created` status and the `Location` and `ETag` headers:
+
+```
+GET /whatever/path/9c41d3a2-result HTTP/1.1
+Host: fhir.example.com
+Accept: application/fhir+json
+```
+
+```
+HTTP/1.1 201 Created
+Location: https://fhir.example.com/fhir/Observation/123/_history/1
+ETag: W/"1"
+Last-Modified: Fri, 01 Mar 2024 14:05:10 GMT
+Content-Type: application/fhir+json; charset=utf-8
+
+{
+  "resourceType": "Observation",
+  "id": "123",
+  "meta": { "versionId": "1", "lastUpdated": "2024-03-01T14:05:10Z" },
+  "status": "final",
+  "code": { "text": "Body weight" },
+  "valueQuantity": { "value": 72.5, "unit": "kg" }
+}
+```
+
+#### Asynchronous Search
+
+A search result is the same `searchset` Bundle the synchronous search would have produced — note that it is
+*not* nested inside a wrapper Bundle:
+
+```
+GET /whatever/path/d52e88b0-result HTTP/1.1
+Host: fhir.example.com
+Accept: application/fhir+json
+```
+
+```
+HTTP/1.1 200 OK
+Content-Type: application/fhir+json; charset=utf-8
+
+{
+  "resourceType": "Bundle",
+  "type": "searchset",
+  "total": 2,
+  "entry": [
+    { "fullUrl": "https://fhir.example.com/fhir/Observation/123", "resource": { "resourceType": "Observation", "id": "123" } },
+    { "fullUrl": "https://fhir.example.com/fhir/Observation/456", "resource": { "resourceType": "Observation", "id": "456" } }
+  ]
+}
+```
+
 ### Security Considerations
 
 Status and result URLs identify a specific job and its output, which may include sensitive data. Even though
@@ -389,3 +466,5 @@ this is under discussion and not yet part of this specification.
     a subset of output parameters as available before completion).
 5.  **Job discovery:** integration with the `Task` resource (e.g., returning a task ID at kick-off so running
     jobs can be discovered by search) is deferred to future work.
+6.  **Search paging:** whether and how paging links (`next`, etc.) in an asynchronously returned `searchset`
+    Bundle are followed (e.g., synchronously, as in regular search) needs implementation experience.
