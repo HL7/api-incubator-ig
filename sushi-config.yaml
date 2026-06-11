@@ -45,14 +45,19 @@ parameters:
 pages:
   index.md:
     title: API Incubator
+  async-interaction.md:
+    title: Asynchronous Interaction Request Pattern
+    extension:
+      - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+        valueCode: trial-use
   async-bulk.html:
     title: Asynchronous Bulk Data Request Pattern
-    extension: 
+    extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
   async-bundle.html:
-    title: Asynchronous Interaction Request Pattern
-    extension: 
+    title: Asynchronous Interaction Request Pattern (moved)
+    extension:
       - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
         valueCode: trial-use
   operations-for-large-resources.html:
@@ -77,7 +82,7 @@ resources:
 menu:
   Home: index.html
   Specification:
-    Asynchronous Interaction Request Pattern: async-bundle.html
+    Asynchronous Interaction Request Pattern: async-interaction.html
     Asynchronous Bulk Data Request Pattern: async-bulk.html
     Operations for Large Resources: operations-for-large-resources.html
     FHIRPath Extensions for FHIR: fhirpath.html
