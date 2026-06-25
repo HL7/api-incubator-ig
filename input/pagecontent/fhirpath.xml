@@ -140,6 +140,74 @@ Profile name matching requires uniqueness; if more than one profile shares the s
 
 <hr/>
 
+<a name="fn-exists"></a>
+<h4>exists(system : System.String, code : System.String) : System.Boolean</h4>
+  
+<p>
+This function returns <code>true</code> if any of the CodeableConcept(s) in the input collection contains a coding that matches the criteria specified by the provided parameters, and <code>false</code> otherwise.
+It provides a shorthand mechanism for testing for a specific coding, making FHIRPath expressions significantly simpler and more readable than equivalent long-form expressions.
+</p>
+<p>
+  The system and code parameters SHALL match any coding in the CodeableConcept's <code>coding</code> element.
+</p>
+
+<p>
+  If the input collection is empty, or not of the expected type, the result is <code>false</code>.
+</p>
+
+<p>
+For example:
+</p>
+<pre class="language-fhirpath"><code class="language-fhirpath">// Test whether an Observation.code contains a specific LOINC coding
+Observation.code.exists('http://loinc.org', '85354-9')
+// This would be equivalent to the following long-form FHIRPath expression:
+Observation.code.coding.exists(system = 'http://loinc.org' and code = '85354-9')
+</code></pre>
+
+<p>
+<b>Special Notes:</b>
+This function is an overload of the standard FHIRPath <a href="https://hl7.org/fhirpath/#existscriteria-expression-boolean"><code>exists()</code></a> function, but is distinguished by its two string arguments, and evaluation context of CodeableConcept.
+</p>
+
+<hr/>
+
+<a name="fn-resolve-iter"></a>
+<h4>resolve(criteria : ($this, $index) => System.Boolean) : collection</h4>
+
+<blockquote>
+  This is a scoped function: The criteria argument is evaluated on the results of the resolve() function, and the $this variable is set to each item in the collection in turn,
+  and the $index variable is set to the index of that item in the collection; those that return <code>true</code> are included in the output collection.
+</blockquote>
+
+<p>
+Returns a collection containing any resources resolved from the input collection where the stated <code>criteria</code> expression evaluates to true.
+Items for which the expression evaluates to <code>false</code> or empty are not included in the result.
+</p>
+<p>
+  If the input collection is empty, or not of the expected type, the result is empty.
+</p>
+
+<p>
+For example:
+</p>
+<pre class="language-fhirpath"><code class="language-fhirpath">// Find an entry with a specific code (e.g., blood pressure)
+Composition.section(%loinc, '8716-3').entry.resolve(code.exists(%loinc,'85354-9'))
+// This would be equivalent to the following long-form FHIRPath expression:
+Composition.section(%loinc, '8716-3').entry.select(resolve().where(code.coding.exists(system = 'http://loinc.org' and code = '85354-9')))
+
+// find any entry in the composition that comply with the vital signs profile
+Composition.section.entry.resolve(conformsTo('http://hl7.org/fhir/StructureDefinition/vitalsigns'))
+// This would be equivalent to the following long-form FHIRPath expression:
+Composition.section.entry.select(resolve().where(conformsTo('http://hl7.org/fhir/StructureDefinition/vitalsigns')))
+</code></pre>
+
+<p>
+<b>Special Notes:</b>
+This is an overload of the existing FHIR <code>resolve()</code> function providing a way to quickly resolve and filter references in a more readable way.
+</p>
+
+<hr/>
+
 <a name="txapi"></a>
 <h3>Terminology Service API</h3>
 
