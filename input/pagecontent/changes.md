@@ -6,3 +6,4 @@
 
 ### Issues Released in initial Incubator snapshot
 **Changes since FHIR R6 ballot4:**
+* [FHIR-57312](https://jira.hl7.org/browse/FHIR-57312):  Define FHIRPath functions section() and entry() on Composition
