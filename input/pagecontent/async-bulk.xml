@@ -15,7 +15,7 @@
 
   <a name="compare-with"></a>
   <h4>Related Pattern: Asynchronous Interaction Request</h4>
-  <p>For use cases that return small amounts of data but may take a lot of time to process, see <a href="async-bundle.html">Asynchronous Interaction Request</a>.</p>
+  <p>For use cases that return small amounts of data but may take a lot of time to process, see <a href="async-interaction.html">Asynchronous Interaction Request</a>.</p>
 
   <a name="kick-off-request"></a>
   <h3>Kick-off Request</h3>
@@ -53,7 +53,7 @@
         <code>application/ndjson</code> and <code>ndjson</code>.
       </p>
       <p>For requests types where the server supports either the Asynchronous Bulk Data Request pattern or the <a
-          href="async-bundle.html">Asynchronous Interaction Request</a> pattern,
+          href="async-interaction.html">Asynchronous Interaction Request</a> pattern,
         requests that include the <code>_outputFormat</code> parameter SHALL trigger the Asynchronous Bulk Data 
         Request pattern.</p>
     </li>
