@@ -18,11 +18,11 @@
 <artifact id="StructureDefinition/GraphDefinition" key="StructureDefinition-GraphDefinition" name="Graph Definition"/>
 <artifact id="List/GraphDefinition-examples" key="List-GraphDefinition-examples" name="GraphDefinition-examples"/>
 <artifact id="List/GraphDefinition-operations" key="List-GraphDefinition-operations" name="GraphDefinition-operations"/>
-<artifact id="SearchParameter/GraphDefinition-context-quantity" key="SearchParameter-GraphDefinition-context-quantity" name="GraphDefinitionContext-quantitySearchParam"/>
-<artifact id="SearchParameter/GraphDefinition-context-type-quantity" key="SearchParameter-GraphDefinition-context-type-quantity" name="GraphDefinitionContext-type-quantitySearchParam"/>
-<artifact id="SearchParameter/GraphDefinition-context-type-value" key="SearchParameter-GraphDefinition-context-type-value" name="GraphDefinitionContext-type-valueSearchParam"/>
-<artifact id="SearchParameter/GraphDefinition-context-type" key="SearchParameter-GraphDefinition-context-type" name="GraphDefinitionContext-typeSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-quantity" key="SearchParameter-GraphDefinition-context-quantity" name="GraphDefinitionContextQuantitySearchParam"/>
 <artifact id="SearchParameter/GraphDefinition-context" key="SearchParameter-GraphDefinition-context" name="GraphDefinitionContextSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-type-quantity" key="SearchParameter-GraphDefinition-context-type-quantity" name="GraphDefinitionContextTypeQuantitySearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-type" key="SearchParameter-GraphDefinition-context-type" name="GraphDefinitionContextTypeSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-type-value" key="SearchParameter-GraphDefinition-context-type-value" name="GraphDefinitionContextTypeValueSearchParam"/>
 <artifact id="SearchParameter/GraphDefinition-date" key="SearchParameter-GraphDefinition-date" name="GraphDefinitionDateSearchParam"/>
 <artifact id="SearchParameter/GraphDefinition-description" key="SearchParameter-GraphDefinition-description" name="GraphDefinitionDescriptionSearchParam"/>
 <artifact id="SearchParameter/GraphDefinition-experimental" key="SearchParameter-GraphDefinition-experimental" name="GraphDefinitionExperimentalSearchParam"/>
