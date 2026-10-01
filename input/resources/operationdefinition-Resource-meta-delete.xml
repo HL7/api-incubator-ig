@@ -11,28 +11,6 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
     <valueCode value="trial-use"/>
   </extension>
-  <extension url="http://hl7.org/fhir/StructureDefinition/example">
-    <extension url="list">
-      <valueString value="1"/>
-    </extension>
-    <extension url="response">
-      <valueBoolean value="false"/>
-    </extension>
-    <extension url="content">
-      <valueString value="$meta-delete-request.txt"/>
-    </extension>
-  </extension>
-  <extension url="http://hl7.org/fhir/build/StructureDefinition/example">
-    <extension url="list">
-      <valueString value="1"/>
-    </extension>
-    <extension url="response">
-      <valueBoolean value="true"/>
-    </extension>
-    <extension url="content">
-      <valueString value="$meta-delete-response.txt"/>
-    </extension>
-  </extension>
   <url value="http://hl7.org/fhir/OperationDefinition/Resource-meta-delete"/>
   <version value="6.0.0"/>
   <name value="Metadelete"/>
