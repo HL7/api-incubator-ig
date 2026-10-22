@@ -6,8 +6,139 @@ This is not the complete set of FHIRPath extensions for FHIR. Most extensions re
 <br/><br/>
 The <a href="#txapi">Terminology Service API</a> is more mature and has some implementation support.<br/>
 The <a href="#factory">Type Factory</a> has seen minor/partial implementation. The base FHIRPath specification, published in STU3, supports native structure creation in a more natural way, and we are seeking implementer feedback on whether some of these functions should be removed.<br/>
-The <a href="#srvr-api">General Service API</a> has not seen any implemenation as yet.
+The <a href="#srvr-api">General Service API</a> has not seen any implementation as yet.
 </blockquote>
+
+<a name="functions"></a>
+<h3>Additional FHIRPath Functions</h3>
+
+<a name="fn-section"></a>
+<h4>section(system : System.String, code : System.String) : collection</h4>
+  
+<p>
+This function returns any descendant sections in a Composition or Composition.section (singular) that match the criteria specified by the provided parameters.
+It provides a shorthand mechanism for navigating Composition sections, making FHIRPath expressions significantly simpler and more readable than equivalent long-form expressions.<br/>
+<em>There is also an overload of this function defined below that allows the section to be identified by a slice name in the current profile in context, rather than a coding.</em>
+</p>
+<p>
+  The system and code parameters SHALL match any coding in the section's <code>code</code> element.
+</p>
+
+<p>
+  If the input collection contains multiple items, the evaluation of the expression will end and signal an error to the calling environment.
+</p>
+<p>
+  If the input collection is empty, or not of the expected type, the result is empty.
+</p>
+
+<p>
+For example:
+</p>
+<pre class="language-fhirpath"><code class="language-fhirpath">// Find the vital signs section using LOINC code
+Composition.section(%loinc, '8716-3')
+// This would be equivalent to the following long-form FHIRPath expression:
+// (where the values come from the parameters, and the %loinc variable is the reference to the LOINC code system)
+Composition.repeatAll(section).where(code.coding.exists(system = 'http://loinc.org' and code = '8716-3'))
+
+// Check if a vital signs section with blood pressure exists (combining section and entry functions)
+Composition.section(%loinc, '8716-3').entry(%loinc, '85354-9').exists()
+</code></pre>
+
+<p>
+<b>Special Notes:</b>
+The resulting expressions are readable enough for presentation products such as the IG Publisher to present them in tabular format, enabling clear communication of Composition structural constraints to implementers.
+</p>
+
+<hr/>
+
+<a name="fn-section-sliced"></a>
+<h4>section(sliceName : System.String) : collection</h4>
+  
+<p>
+The behaviour of this function is the same as the coded form of the <code>section</code> function above, but this form is used when the section is identified by a slice name in the current profile in context, rather than a code.
+</p>
+<p>
+  This would be equivalent to the following long-form FHIRPath expression:<br/>
+  <pre class="language-fhirpath"><code class="language-fhirpath">repeatAll(section).slice(%profile, sliceName)</code></pre>
+</p>
+
+<p>
+For example:
+</p>
+<pre class="language-fhirpath"><code class="language-fhirpath">// Find a section by slice name - e.g. problems in IPS used in an invariant in a profile derived from IPS
+Composition.section('sectionProblems').exists()
+</code></pre>
+
+<hr/>
+
+<a name="fn-entry"></a>
+<h4>entry(system : System.String, code : System.String) : collection</h4>
+  
+<p>
+This function resolves the references in the <code>entry</code> elements of the input <code>Composition.section</code> collection, 
+and returns the resolved resources that match the criteria specified by the provided parameters.
+It provides a shorthand mechanism for navigating Composition entries, making FHIRPath expressions significantly simpler and more readable than equivalent long-form expressions.<br/>
+<em>There is also an overload of this function defined below that allows the entry to be identified by a profile in the current context, rather than system and code.</em>
+</p>
+<p>
+  The system and code parameters SHALL match any coding in the <code>code</code> element of the resource referenced by the entry.
+</p>
+
+<p>
+  If the input collection is empty, the result is empty.<br/>
+  Any items in the input collection that are not <code>Composition.section</code> are ignored.
+</p>
+
+<p>
+For example:
+</p>
+<pre class="language-fhirpath"><code class="language-fhirpath">// Find an entry with a specific code (e.g., blood pressure)
+Composition.section.entry(%loinc, '85354-9')
+// This would be equivalent to the following long-form FHIRPath expression:
+// (where the values come from the parameters, and the %loinc variable is the reference to the LOINC code system)
+Composition.section.entry.select(resolve().where(code.coding.exists(system = 'http://loinc.org' and code = '85354-9')))
+
+// Check if a vital signs section with blood pressure exists (combining section and entry functions)
+Composition.section(%loinc, '8716-3').entry(%loinc, '85354-9').exists()
+</code></pre>
+
+<p>
+<b>Special Notes:</b>
+The resulting expressions are readable enough for the IG Publisher to present them in tabular format, enabling clear communication of Composition structural constraints to implementers.
+</p>
+
+<hr/>
+
+<a name="fn-entry-profile"></a>
+<h4>entry(profile : System.String) : collection</h4>
+  
+<p>
+The behaviour of this function is the same as the coded form of the <code>entry</code> function above, 
+but this form is used when the entry is identified by a profile in the current context, rather than system and code.
+The <code>profile</code> parameter is either a profile canonical URL or a profile name.
+</p>
+<p>
+  The resource referenced by the entry SHALL conform to the provided profile.
+</p>
+
+<p>
+For example:
+</p>
+<pre class="language-fhirpath"><code class="language-fhirpath">// Find entries matching a profile URL
+Composition.section.entry('http://hl7.org/fhir/StructureDefinition/vitalsigns')
+// This would be equivalent to the following long-form FHIRPath expression:
+Composition.section.entry.select(resolve().where(conformsTo('http://hl7.org/fhir/StructureDefinition/vitalsigns')))
+
+// Find entries by profile name (where the name is unique in context)
+Composition.section('sectionMedications').entry('MedicationStatement')
+</code></pre>
+
+<p>
+<b>Special Notes:</b>
+Profile name matching requires uniqueness; if more than one profile shares the same name in the applicable context, the evaluation will end and signal an error to the calling environment. This safeguard prevents ambiguous matches.
+</p>
+
+<hr/>
 
 <a name="txapi"></a>
 <h3>Terminology Service API</h3>
@@ -712,4 +843,5 @@ Parameters:
 </ul>
 <p><b>Return Value:</b> The bundle from $apply. If the operation fails, the return value is empty.</p>
 
+<script src="assets/js/prism-fhirpath.js"></script>
 </div>
