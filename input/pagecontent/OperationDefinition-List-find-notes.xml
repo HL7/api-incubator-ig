@@ -1,0 +1,70 @@
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
+
+<a name="request"> </a>
+<h4>Example Request</h4>
+
+<pre>
+// find the current allergy list for patient 'example'
+
+GET /ehr/fhir/List/$find?patient=example&amp;name=$current-allergies
+</pre>
+
+<a name="response"> </a>
+<h4>Example Response</h4>
+
+<pre>
+// return the current allergies list for the patient
+
+HTTP/1.1 200 OK
+[other headers]
+
+<pre class="json" style="white-space: pre; overflow: hidden">{
+  "resourceType" : "List",
+  "id" : "current-allergies",
+  "text" : {
+    "status" : "generated",
+    "div" : "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;\n      &lt;p&gt;List prepared for Dr Adam Careful&lt;/p&gt;\n      &lt;p&gt;Patient Peter Chalmers, DOB = Dec 25, 1974, MRN = 12345 (Acme Healthcare) has the following allergies&lt;/p&gt;\n      &lt;ul&gt;\n        &lt;li&gt;cashew nut allergenic extract Injectable Product (&lt;b&gt;High&lt;/b&gt;)&lt;/li&gt;\n        &lt;li&gt;Allergenic extract, penicillin (high)&lt;/li&gt;\n      &lt;/ul&gt;\n    &lt;/div&gt;"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/list-for",
+    "valueReference" : {
+      "reference" : "Patient/example",
+      "display" : "Dr Adam Careful"
+    }
+  }],
+  "status" : "current",
+  "mode" : "working",
+  "title" : "Current Allergy List",
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "52472-8",
+      "display" : "Allergies and Adverse Drug Reactions"
+    }],
+    "text" : "Current Allergy List"
+  },
+  "date" : "2015-07-14T23:10:23+11:00",
+  "source" : {
+    "reference" : "Patient/example"
+  },
+  "orderedBy" : {
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/list-order",
+      "code" : "entry-date"
+    }]
+  },
+  "entry" : [{
+    "item" : {
+      "reference" : "AllergyIntolerance/example"
+    }
+  },
+  {
+    "item" : {
+      "reference" : "AllergyIntolerance/medication"
+    }
+  }]
+}
+</pre>
+</pre>
+
+</div>

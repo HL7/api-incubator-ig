@@ -10,7 +10,7 @@ title: FHIR R6 API Incubator
 description: A guide that details how to capture and exchange API data in FHIR
 status: active # draft | active | retired | unknown
 version: 0.1.0
-fhirVersion: 6.0.0-ballot3
+fhirVersion: 6.0.0-snapshot1
 copyrightYear: 2025+
 releaseLabel: ci-build
 license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
@@ -27,7 +27,8 @@ extension:
     valueCode: fhir
 
 dependencies:
-
+  hl7.fhir.uv.mapping-language: current
+  
 parameters:
   apply-publisher: true
   apply-contact: true
@@ -41,7 +42,7 @@ parameters:
   special-url-base: http://hl7.org/fhir
   additional-resource: 
     - input/resources/graphdefinition/StructureDefinition-GraphDefinition.xml
-
+  auto-oid-root: 2.16.840.1.113883.4.642.40.92
 pages:
   index.md:
     title: API Incubator

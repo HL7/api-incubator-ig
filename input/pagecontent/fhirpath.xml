@@ -46,7 +46,7 @@ Composition.section(%loinc, '8716-3').entry(%loinc, '85354-9').exists()
 
 <p>
 <b>Special Notes:</b>
-The resulting expressions are readable enough for the IG Publisher to present them in tabular format, enabling clear communication of Composition structural constraints to implementers.
+The resulting expressions are readable enough for presentation products such as the IG Publisher to present them in tabular format, enabling clear communication of Composition structural constraints to implementers.
 </p>
 
 <hr/>

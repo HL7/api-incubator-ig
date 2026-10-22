@@ -30,7 +30,7 @@
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.4.642.5.1327"/>
   </identifier>
-  <version value="6.0.0"/>
+  <version value="0.1.0"/>
   <name value="GraphDefinition"/>
   <title value="Graph Definition"/>
   <status value="active"/>
@@ -117,7 +117,7 @@
         <severity value="warning"/>
         <human value="URL should not contain | or # - these characters make processing canonical references problematic"/>
         <expression value="exists() implies matches('^[^|# ]+$')"/>
-        <source value="http://hl7.org/fhir/StructureDefinition/CanonicalResource"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/GraphDefinition"/>
       </constraint>
       <isSummary value="true"/>
       <mapping>
@@ -469,6 +469,7 @@
         <description value="A type of resource, or a Reference (from all versions)"/>
         <valueSet value="http://hl7.org/fhir/ValueSet/version-independent-all-resource-types"/>
         <additional>
+          <key value="ui"/>
           <purpose value="ui"/>
           <valueSet value="http://hl7.org/fhir/ValueSet/all-resource-types"/>
           <shortDoco value="This is the value set to use for just R5 resource types"/>

@@ -1,0 +1,52 @@
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
+
+<a name="request"> </a>
+<h4>Example Request</h4>
+<pre>
+
+POST /fhir/Patient/example/$meta-add
+[Other headers]
+
+&lt;Parameters xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;meta&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;record-lost&quot;/&gt;
+        &lt;display value=&quot;Patient File Lost&quot;/&gt;
+      &lt;/tag&gt;
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+
+<a name="response"> </a>
+<h4>Example Response</h4>
+<pre>
+// all the tags, profiles, and security labels used on patient resources
+
+HTTP/1.1 200 OK
+[other headers]
+
+&lt;Parameters xmlns=&quot;http://hl7.org/fhir&quot;&gt;
+  &lt;parameter&gt;
+    &lt;name value=&quot;return&quot;/&gt;
+    &lt;valueMeta&gt;
+      &lt;profile value=&quot;http://hl7.org/fhir/StructureDefinition/daf-patient&quot;/&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;current&quot;/&gt;
+        &lt;display value=&quot;Current Inpatient&quot;/&gt;
+      &lt;/tag&gt;
+      &lt;tag&gt;
+        &lt;system value=&quot;http://example.org/codes/tags&quot;/&gt;
+        &lt;code value=&quot;record-lost&quot;/&gt;
+        &lt;display value=&quot;Patient File Lost&quot;/&gt;
+      &lt;/tag&gt;    
+    &lt;/valueMeta&gt;
+  &lt;/parameter&gt;
+&lt;/Parameters&gt;
+</pre>
+
+</div>

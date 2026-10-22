@@ -1,43 +1,43 @@
 == Suppressed Messages ==
 
 # Jurisdiction deprecation warning
-INFORMATION: ImplementationGuide/hl7.fhir.uv.api-incubator: ImplementationGuide.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: OperationDefinition/List-find: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: OperationDefinition/Resource-large-resource-add: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-context: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-context-quantity: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-context-type: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-context-type-quantity: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-context-type-value: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-date: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-description: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-identifier: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-jurisdiction: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-name: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-publisher: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-start: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-status: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-url: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-version: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: SearchParameter/GraphDefinition-experimental: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: CodeSystem/graph-compartment-rule: CodeSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: CodeSystem/graph-compartment-use: CodeSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: OperationDefinition/Resource-large-resource-filter: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: OperationDefinition/Resource-large-resource-remove: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: StructureDefinition/GraphDefinition: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/graph-compartment-rule: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: ValueSet/graph-compartment-use: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: OperationDefinition/Resource-graph: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: OperationDefinition/Resource-meta: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: OperationDefinition/Resource-meta-add: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
-INFORMATION: OperationDefinition/Resource-meta-delete: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot3
+INFORMATION: ImplementationGuide/hl7.fhir.uv.api-incubator: ImplementationGuide.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: OperationDefinition/List-find: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: OperationDefinition/Resource-large-resource-add: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-context: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-context-quantity: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-context-type: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-context-type-quantity: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-context-type-value: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-date: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-description: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-identifier: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-jurisdiction: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-name: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-publisher: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-start: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-status: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-url: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-version: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: SearchParameter/GraphDefinition-experimental: SearchParameter.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: CodeSystem/graph-compartment-rule: CodeSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: CodeSystem/graph-compartment-use: CodeSystem.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: OperationDefinition/Resource-large-resource-filter: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: OperationDefinition/Resource-large-resource-remove: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: StructureDefinition/GraphDefinition: StructureDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: ValueSet/graph-compartment-rule: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: ValueSet/graph-compartment-use: ValueSet.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: OperationDefinition/Resource-graph: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: OperationDefinition/Resource-meta: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: OperationDefinition/Resource-meta-add: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
+INFORMATION: OperationDefinition/Resource-meta-delete: OperationDefinition.jurisdiction[0]: Reference to deprecated ValueSet http://hl7.org/fhir/ValueSet/jurisdiction|6.0.0-ballot5
 
 # R6 IG messages
-ERROR: ImplementationGuide/hl7.fhir.uv.api-incubator: This IG is version 6.0.0-ballot3, while the IG 'hl7.terminology.r5' is from version 5.0.0
-ERROR: ImplementationGuide/hl7.fhir.uv.api-incubator: This IG is version 6.0.0-ballot3, while the IG 'hl7.fhir.uv.extensions.r5' is from version 5.0.0
-ERROR: ImplementationGuide/hl7.fhir.uv.api-incubator: This IG is version 6.0.0-ballot3, while the IG 'hl7.fhir.uv.tools.r5' is from version 5.0.0
+ERROR: ImplementationGuide/hl7.fhir.uv.api-incubator: This IG is version 6.0.0-ballot5, while the IG 'hl7.terminology.r5' is from version 5.0.0
+ERROR: ImplementationGuide/hl7.fhir.uv.api-incubator: This IG is version 6.0.0-ballot5, while the IG 'hl7.fhir.uv.extensions.r5' is from version 5.0.0
+ERROR: ImplementationGuide/hl7.fhir.uv.api-incubator: This IG is version 6.0.0-ballot5, while the IG 'hl7.fhir.uv.tools.r5' is from version 5.0.0
 ERROR: There is no jira specification file defined with the expected name of FHIR-api-incubator in the xml folder of the  https://github.com/HL7/Jira-Spec-Artifacts project.  This must exist before ballot or publication.
-WARNING: ImplementationGuide/hl7.fhir.uv.api-incubator: ImplementationGuide.dependsOn[0]: The ImplementationGuide is based on FHIR version 6.0.0-ballot3 but package hl7.terminology.r5#7.1.0 is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
+WARNING: ImplementationGuide/hl7.fhir.uv.api-incubator: ImplementationGuide.dependsOn[0]: The ImplementationGuide is based on FHIR version 6.0.0-ballot5 but package hl7.terminology.r5#7.1.0 is based on FHIR version 5.0.0. In general, this version mismatch should be avoided - some tools will try to make this work with variable degrees of success, but others will not even try
 ERROR: ImplementationGuide/hl7.fhir.uv.api-incubator: ImplementationGuide.dependsOn[1]: The canonical URL http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions points to the package hl7.fhir.uv.extensions which is inconsistent with the stated packageId of hl7.fhir.uv.extensions.r5
 
 # Conformance clause tagging

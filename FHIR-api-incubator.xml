@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="fhir-i" url="http://hl7.org/fhir/uv/api-incubator">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="fhir-i" gitUrl="https://github.com/HL7/api-incubator" url="http://hl7.org/fhir/uv/api-incubator">
 <version code="current" url=""/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
@@ -18,11 +18,11 @@
 <artifact id="StructureDefinition/GraphDefinition" key="StructureDefinition-GraphDefinition" name="Graph Definition"/>
 <artifact id="List/GraphDefinition-examples" key="List-GraphDefinition-examples" name="GraphDefinition-examples"/>
 <artifact id="List/GraphDefinition-operations" key="List-GraphDefinition-operations" name="GraphDefinition-operations"/>
-<artifact id="SearchParameter/GraphDefinition-context-quantity" key="SearchParameter-GraphDefinition-context-quantity" name="GraphDefinitionContext-quantitySearchParam"/>
-<artifact id="SearchParameter/GraphDefinition-context-type-quantity" key="SearchParameter-GraphDefinition-context-type-quantity" name="GraphDefinitionContext-type-quantitySearchParam"/>
-<artifact id="SearchParameter/GraphDefinition-context-type-value" key="SearchParameter-GraphDefinition-context-type-value" name="GraphDefinitionContext-type-valueSearchParam"/>
-<artifact id="SearchParameter/GraphDefinition-context-type" key="SearchParameter-GraphDefinition-context-type" name="GraphDefinitionContext-typeSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-quantity" key="SearchParameter-GraphDefinition-context-quantity" name="GraphDefinitionContextQuantitySearchParam"/>
 <artifact id="SearchParameter/GraphDefinition-context" key="SearchParameter-GraphDefinition-context" name="GraphDefinitionContextSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-type-quantity" key="SearchParameter-GraphDefinition-context-type-quantity" name="GraphDefinitionContextTypeQuantitySearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-type" key="SearchParameter-GraphDefinition-context-type" name="GraphDefinitionContextTypeSearchParam"/>
+<artifact id="SearchParameter/GraphDefinition-context-type-value" key="SearchParameter-GraphDefinition-context-type-value" name="GraphDefinitionContextTypeValueSearchParam"/>
 <artifact id="SearchParameter/GraphDefinition-date" key="SearchParameter-GraphDefinition-date" name="GraphDefinitionDateSearchParam"/>
 <artifact id="SearchParameter/GraphDefinition-description" key="SearchParameter-GraphDefinition-description" name="GraphDefinitionDescriptionSearchParam"/>
 <artifact id="SearchParameter/GraphDefinition-experimental" key="SearchParameter-GraphDefinition-experimental" name="GraphDefinitionExperimentalSearchParam"/>
@@ -43,6 +43,7 @@
 <page key="async-bulk" name="Asynchronous Bulk Data Request Pattern"/>
 <page key="async-interaction" name="Asynchronous Interaction Request Pattern"/>
 <page key="async-bundle" name="Asynchronous Interaction Request Pattern (moved)"/>
+<page deprecated="true" key="asyncbulk" name="Asynchronous bulk data pattern"/>
 <page key="changes" name="Change Log"/>
 <page key="fhirpath" name="FHIRPath Extensions for FHIR"/>
 <page key="operations-for-large-resources" name="Operations for Large Resources (e.g., Groups/Lists)"/>

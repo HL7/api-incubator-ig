@@ -9,9 +9,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.useContext.valueCodeableConcept"/>
-        </extension>
         <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-context"/>
         <status value="active"/>
         <description value="A use context assigned to the graph definition"/>
@@ -19,6 +16,8 @@
         <type value="token"/>
         <expression value="(GraphDefinition.useContext.value.ofType(CodeableConcept))"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -29,9 +28,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.useContext.valueQuantity,{{name}}.useContext.valueRange"/>
-        </extension>
         <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-context-quantity"/>
         <status value="active"/>
         <description value="A quantity- or range-valued use context assigned to the graph definition"/>
@@ -39,6 +35,8 @@
         <type value="quantity"/>
         <expression value="(GraphDefinition.useContext.value.ofType(Quantity)) | (GraphDefinition.useContext.value.ofType(Range))"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -49,9 +47,6 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.useContext.code"/>
-        </extension>
         <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-context-type"/>
         <status value="active"/>
         <description value="A type of use context assigned to the graph definition"/>
@@ -59,6 +54,8 @@
         <type value="token"/>
         <expression value="GraphDefinition.useContext.code"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -69,13 +66,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-context-type-quantity"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-context-type-quantity"/>
         <status value="active"/>
         <description value="A use context type and quantity- or range-based value assigned to the graph definition"/>
         <code value="context-type-quantity"/>
         <type value="composite"/>
         <expression value="GraphDefinition.useContext"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
         <component>
           <definition value="http://hl7.org/fhir/SearchParameter/GraphDefinition-context-type"/>
           <expression value="code"/>
@@ -94,13 +93,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-context-type-value"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-context-type-value"/>
         <status value="active"/>
         <description value="A use context type and value assigned to the graph definition"/>
         <code value="context-type-value"/>
         <type value="composite"/>
         <expression value="GraphDefinition.useContext"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
         <component>
           <definition value="http://hl7.org/fhir/SearchParameter/GraphDefinition-context-type"/>
           <expression value="code"/>
@@ -119,16 +120,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.date"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-date"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-date"/>
         <status value="active"/>
         <description value="The graph definition publication date"/>
         <code value="date"/>
         <type value="date"/>
         <expression value="GraphDefinition.date"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="false"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -139,16 +139,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.description"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-description"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-description"/>
         <status value="active"/>
         <description value="The description of the graph definition"/>
         <code value="description"/>
         <type value="string"/>
         <expression value="GraphDefinition.description"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="false"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -159,16 +158,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.identifier"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-identifier"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-identifier"/>
         <status value="active"/>
         <description value="External identifier for the graph definition"/>
         <code value="identifier"/>
         <type value="token"/>
         <expression value="GraphDefinition.identifier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -179,16 +177,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.jurisdiction"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-jurisdiction"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-jurisdiction"/>
         <status value="active"/>
         <description value="Jurisdiction of the authority that maintains the the graph definition"/>
         <code value="jurisdiction"/>
         <type value="token"/>
         <expression value="GraphDefinition.jurisdiction"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -199,16 +196,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.name"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-name"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-name"/>
         <status value="active"/>
         <description value="Computationally friendly name of the graph definition"/>
         <code value="name"/>
         <type value="string"/>
         <expression value="GraphDefinition.name"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="false"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -219,16 +215,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.publisher"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-publisher"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-publisher"/>
         <status value="active"/>
         <description value="Name of the publisher of the graph definition"/>
         <code value="publisher"/>
         <type value="string"/>
         <expression value="GraphDefinition.publisher"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="false"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -239,16 +234,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="GraphDefinition.start"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-start"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-start"/>
         <status value="active"/>
         <description value="Type of resource at which the graph starts"/>
         <code value="start"/>
         <type value="token"/>
         <expression value="GraphDefinition.start"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="false"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -259,16 +253,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.status"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-status"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-status"/>
         <status value="active"/>
         <description value="The current status of the graph definition"/>
         <code value="status"/>
         <type value="token"/>
         <expression value="GraphDefinition.status"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="false"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -279,16 +272,15 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.url"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-url"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-url"/>
         <status value="active"/>
         <description value="The uri that identifies the graph definition"/>
         <code value="url"/>
         <type value="uri"/>
         <expression value="GraphDefinition.url"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="false"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -299,25 +291,21 @@
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="{{name}}.version"/>
-        </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/GraphDefinition-version"/>
+        <url value="http://hl7.org/fhir/SearchParameter/GraphDefinition-version"/>
         <status value="active"/>
         <description value="The business version of the graph definition"/>
         <code value="version"/>
         <type value="token"/>
         <expression value="GraphDefinition.version"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="false"/>
       </SearchParameter>
     </resource>
   </entry>
   <entry>
     <resource>
       <SearchParameter>
-        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
-          <valueString value="GraphDefinition.experimental"/>
-        </extension>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>
         </extension>
@@ -326,6 +314,9 @@
         <code value="experimental"/>
         <type value="token"/>
         <expression value="GraphDefinition.experimental"/>
+        <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="false"/>
       </SearchParameter>
     </resource>
   </entry>
