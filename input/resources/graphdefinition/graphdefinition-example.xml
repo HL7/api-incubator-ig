@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<GraphDefinition xmlns="http://hl7.org/fhir">
+<GraphDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/GraphDefinition|0.1.0">
   <id value="example"/>
-  <resourceDefinition value="http://hl7.org/fhir/StructureDefinition/GraphDefinition|0.1.0"/>
   <url value="http://example.org/GraphDefinition/example"/>
   <name value="DocumentGenerationTemplate"/>
   <title value="Document Generation Template"/>
