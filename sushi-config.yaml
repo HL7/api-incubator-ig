@@ -26,8 +26,8 @@ extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: fhir
 
-dependencies:
-  hl7.fhir.uv.mapping-language: current
+#dependencies:
+#  hl7.fhir.uv.mapping-language: current
   
 parameters:
   apply-publisher: true
